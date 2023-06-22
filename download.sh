@@ -12,12 +12,14 @@ OUTPUT_DIRECTORY="download"
 
 for i in $(cat ${INPUT_FILENAME}) 
 do
-        echo -ne "\rDownloading..."
-        printf "%*s" 54 
         total=`ls -al ${OUTPUT_DIRECTORY} | wc -l`
+        banner="\rReached threshold, sleeping for $DELAY seconds / Downloded: $total file(s)"
+        echo -ne "\rDownloading..."
+        printf "%*s" `expr ${#banner} - 16`
         if [ $COUNTER -eq $THREADS ] 
         then
-                echo -ne "\rReached threshold, sleeping for $DELAY seconds / Downloded: $total file(s)  "
+                # echo -ne "\rReached threshold, sleeping for $DELAY seconds / Downloded: $total file(s)  "
+                echo -ne $banner
                 sleep $DELAY
                 COUNTER=0
         fi
