@@ -17,7 +17,7 @@ do
         total=`ls -al ${OUTPUT_DIRECTORY} | wc -l`
         if [ $COUNTER -eq $THREADS ] 
         then
-                echo -ne "\rReached threshold, sleeping for $DELAY seconds / Downloded: $total file(s) "
+                echo -ne "\rReached threshold, sleeping for $DELAY seconds / Downloded: $total file(s)  "
                 sleep $DELAY
                 COUNTER=0
         fi
