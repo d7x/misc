@@ -8,7 +8,7 @@ COUNTER=0
 THREADS=40
 DELAY=10
 INPUT_FILENAME="urls"
-OUTPUT_DIRECTORY="downloaded"
+OUTPUT_DIRECTORY="download"
 
 for i in $(cat ${INPUT_FILENAME}) 
 do
