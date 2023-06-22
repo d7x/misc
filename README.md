@@ -1,5 +1,5 @@
 # misc
-bash, pythons scripts etc. 
+bash, python scripts etc. 
 
 # download.sh
 - threaded curl downloader 
